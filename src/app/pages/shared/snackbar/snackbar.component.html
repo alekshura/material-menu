@@ -1,0 +1,10 @@
+<div class="mat-snackbar-overlay-pane" *ngIf=show>
+    <div class="mat-snackbar-container">
+        <div class="mat-snackbar-message">
+            <span>{{message}}</span>
+            <div class="mat-snackbar-message-action">
+                <button mat-button (click)="cancel()">{{action}}</button>
+            </div>
+        </div>
+    </div>
+</div>

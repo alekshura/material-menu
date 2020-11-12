@@ -1,0 +1,26 @@
+<h1 mat-dialog-title></h1>
+<div mat-dialog-content>
+
+  <div class="mat-avatar-container">
+    <app-avatar (click)="toogle()" name="{{currentProfile.firstName}} {{currentProfile.lastName}}" size="80">
+    </app-avatar>
+  </div>
+  <div class="mat-dialog-user-name">{{currentProfile.firstName}} {{currentProfile.lastName}}</div>
+  <div class="mat-dialog-user-email">{{currentProfile.personalNumber}}</div>
+
+  <div class="mat-dialog-manage">Admin profile</div>
+
+  <mat-divider class="mat-divider mat-divider-dialog-margin"></mat-divider>
+
+  <div class="mat-dialog-user-pref">
+    <div><label>Login</label>
+      <p>{{currentProfile.login}}</p>
+    </div>
+  </div>
+
+  <mat-divider class="mat-divider mat-divider-dialog-margin"></mat-divider>
+
+  <div mat-dialog-actions>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" (click)="openDialog()">Logout</button>
+  </div>
+</div>

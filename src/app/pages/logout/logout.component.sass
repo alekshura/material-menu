@@ -1,0 +1,105 @@
+@import 'src/styles/variables'
+@import 'src/styles/mixins'
+@media screen and (min-width: 1280px)
+    main
+        padding: 0 80px 120px
+
+main
+    overflow: hidden
+    padding: 0 20px 80px
+
+main, section
+    position: relative
+
+.title
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    color: $title-color
+    font-size: 32px
+    font-weight: $medium-font-weight
+    left: -1px
+    line-height: 38px
+    margin: 0
+    padding: 0
+    position: relative
+
+.content-wrapper
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    margin: 0 0 auto
+
+
+.card
+    background: #fff
+    border-radius: 8px
+    border: 1px solid #eceff1
+    box-shadow: none
+    margin: 0 auto 20px
+    max-width: 1280px
+    overflow: hidden
+    height: auto
+    min-height: 500px
+    width: 450px
+    border-radius: 8px
+    border: 1px solid #dadce0
+    display: block
+    flex-shrink: 0
+    margin: 0 auto
+    transition: .2s
+
+@media screen and (min-width: 720px)
+    .card
+        margin-bottom: 48px
+
+
+.card .card__content, .card .card__footer
+    padding: 32px 20px 50px
+
+@media screen and (min-width: 1000px)
+    .card .card__content
+        padding: 80px 112px
+
+h1, h2
+    color: $title-color
+    margin-top: 0
+    font: 500 26px/32px $font-family-sans-serif
+
+.card p
+    margin-top: 0
+
+p
+    margin: 16px 0
+    padding: 0
+    ont-size: 14px
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary
+    background-color: admin-third-color
+
+.card__content
+        h1
+            margin-left: -24px
+            margin-right: -24px
+            font-size: 18px
+
+@media screen and (max-width: 960px)
+    .card
+        width:100%!important
+
+    .card__content
+        h1
+            margin-left: 0px
+            margin-right: 0px
+
+img.logo
+    margin-left: -54px
+
+.black-btn
+  background: #000
+  border: solid 1px #000
+  color: #fff
+.black-btn:hover
+    background: #fce610
+    border: solid 1px #fce610
+    color: #000

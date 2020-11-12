@@ -1,0 +1,229 @@
+@import 'src/styles/table'
+@import 'src/styles/mixins'
+
+.mat-column-pair
+  text-align: center
+  flex: 0 1 7%
+
+.mat-column-limit
+  text-align: center
+  flex: 0 1 10%
+
+mat-header-cell.mat-column-pair,mat-header-cell.mat-column-limit
+  justify-content: center
+  border-bottom: 0
+
+.mat-column-amount
+  text-align: center
+  flex: 0 1 10%
+
+.mat-column-percentage
+  flex: 0 1 7%
+  text-align: center
+  justify-content: center
+
+.mat-column-net
+  flex: 0 1 10%
+  justify-content: center
+
+.mat-column-netequivalent
+  flex: 0 1 10%
+
+.mat-column-netavgrate
+  flex: none
+  flex: 0 1 5%
+
+.mat-column-buy
+  flex: 0 1 10%
+  justify-content: center
+
+.mat-column-buyequivalent
+  flex: 0 1 10%
+
+.mat-column-buyavgrate
+  flex: none
+  flex: 0 1 5%
+
+.mat-column-sell
+  flex: 0 1 10%
+  justify-content: center
+
+.mat-column-sellequivalent
+  flex: 0 1 10%
+
+.mat-column-sellavgrate
+  flex: none
+  flex: 0 1 5%
+
+.mat-column-who
+  flex: 0 1 8%
+  font-size: 12px
+
+.mat-column-when
+  flex: none
+  flex: 0 1 5%
+
+mat-header-cell.mat-column-header-remaining-limit,mat-header-cell.mat-column-header-net,
+  mat-header-cell.mat-column-header-buy, mat-header-cell.mat-column-header-sell, mat-header-cell.mat-column-header-modification
+    justify-content: center
+
+mat-header-cell.mat-column-header-pair
+  border-top-left-radius: 8px
+
+mat-header-cell.mat-column-header-pair, mat-header-cell.mat-column-header-remaining-limit
+  flex: 0 1 13%
+
+mat-header-cell.mat-column-header-net,mat-header-cell.mat-column-header-buy,mat-header-cell.mat-column-header-sell
+  flex: 0 1 20%
+
+mat-header-cell.mat-column-header-modification
+  flex: 0 1 10%
+
+.mat-column-amount,.mat-column-percentage,.mat-column-net,.mat-column-netequivalent,.mat-column-netavgrat,.mat-column-buy,.mat-column-buyequivalent,
+.mat-column-buyavgrate,.mat-column-sell,.mat-column-sellequivalent,.mat-column-sellavgrate,
+mat-header-cell.mat-column-who,.mat-column-when,.mat-column-netavgrate
+  display: flex
+  justify-content: flex-end!important
+
+.mat-column-who
+  display: flex
+  justify-content: center!important
+
+.mat-table .mat-header-row:first-child
+  border-bottom: none
+
+mat-header-cell, mat-cell
+  padding: 0px 12px
+  height: auto
+
+mat-cell
+  font-size: 13px
+mat-header-cell
+  color: rgba(0,0,0,0.87)
+  opacity: 1
+  font-size: 12px
+  background-color: #fafafa
+  border-bottom: 1px solid rgba(0,0,0,0.12)
+  font-weight: 600
+
+.mat-canvas-bar-container
+  color: $description-color
+  font-weight: $medium-font-weight
+  font-size: 14px
+  line-height: 24px
+  margin-bottom: 15px
+  -ms-flex-align: center
+  align-items: center
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-negative: 0
+
+.title .mat-canvas-bar-container
+  font-size: 13px
+  line-height: 18px
+  margin-bottom: 10px
+  color: #4a4a4a
+  margin-top: -10px
+
+  .mat-icon
+    margin-right: 5px
+
+.mat-header-cell
+  border-bottom: 0
+
+/** .mat-header-cell:not(:first-child)
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important **/
+
+.mat-cell
+  width: 25%
+  border-right-color: rgba(0, 0, 0, 0.06) !important
+  border-right-width: 1px
+  border-style: solid
+  border-bottom: 0
+  border-left: 0
+  border-top: 0
+
+mat-header-cell.mat-column-header-modification
+  padding-left: 16px
+  padding-right: 16px
+
+
+.mat-table-expanded-element-row:not(.mat-table-expanded-row):hover
+  background: whitesmoke
+
+
+.mat-table-expanded-element-row:not(.mat-table-expanded-row):active
+  background: #efefef
+
+.mat-table-expanded-element-row td
+  border-bottom-width: 0
+
+.mat-row.mat-table-expanded-element-row
+  display: none!important
+
+.mat-row.mat-table-expanded-row.mat-table-expanded-element-row
+  display: flex !important
+  background-color: #fff
+  border-bottom: 0
+  border-radius: 8px
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15)
+  height: 100%
+  margin-right: -8px
+  margin-left: -8px
+  overflow: hidden
+  padding-bottom: 25px
+  transform: translateZ(0)
+  min-height: auto
+  border-bottom-right-radius: 8px !important
+  border-bottom-left-radius: 8px !important
+
+
+.mat-row.mat-table-expanded-row.mat-table-expanded-element-row:hover
+    background-color: #fff!important
+
+.black-btn
+  background: #000
+  border: solid 1px #000
+  color: #fff
+.black-btn:hover
+    background: #fce610
+    border: solid 1px #fce610
+    color: #000
+
+.mat-form-limit-content,.mat-form-limit-actions
+  padding-left: 24px
+  padding-right: 24px
+.mat-card-content .title h2
+  opacity: 1
+  font-weight: 500
+  font-size: 18px
+  color: #637282
+.mat-form-limit
+  width: 100%
+.mat-form-limit-actions
+  float: right
+
+label
+  color: #93a0ab
+  display: block
+  font-size: 13px
+  padding-bottom: 8px
+
+::ng-deep
+  .mat-expansion-panel-body
+    padding: 0!important
+  .mat-expansion-panel:not([class*=mat-elevation-z])
+    box-shadow: none
+  mat-panel-title.mat-expansion-panel-header-title
+    color: #637282
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+    align-items: center
+    display: flex
+    -ms-flex-negative: 0
+    margin-top: 5px
+  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true])
+    background: initial
+  .mat-expanded mat-panel-title.mat-expansion-panel-header-title
+    margin-top: -5px

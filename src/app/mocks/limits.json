@@ -1,0 +1,95 @@
+[
+    {
+        "id": 1,
+        "pair": "EUR/USD",
+        "limit": 1000000,
+        "currency": "EUR",
+        "remainingLimitAmount": -925000,
+        "remainingLimitPercentage": 13,
+        "net": {
+            "amount": 12100,
+            "currency": "EUR",
+            "equivalent": 34784,
+            "equivalentCurrency": "USD",
+            "averageRate": 556634
+        },
+        "buy": {
+            "amount": 55100,
+            "currency": "EUR",
+            "equivalent": 778784,
+            "equivalentCurrency": "USD",
+            "averageRate": 556634
+        },
+        "sell": {
+            "amount": 12100,
+            "currency": "EUR",
+            "equivalent": 34784,
+            "equivalentCurrency": "USD",
+            "averageRate": 556634
+        },
+        "modifiedBy": "AVAL/IKarpenko",
+        "modificationDate": 643467463
+    },
+    {
+        "id": 2,
+        "pair": "EUR/UAH",
+        "limit": 2000000,
+        "currency": "EUR",
+        "remainingLimitAmount": -6565000,
+        "remainingLimitPercentage": 13,
+        "net": {
+            "amount": 121050,
+            "currency": "EUR",
+            "equivalent": 345784,
+            "equivalentCurrency": "UAH",
+            "averageRate": 556634
+        },
+        "buy": {
+            "amount": 551040,
+            "currency": "EUR",
+            "equivalent": 778784,
+            "equivalentCurrency": "UAH",
+            "averageRate": 556634
+        },
+        "sell": {
+            "amount": 12100,
+            "currency": "EUR",
+            "equivalent": 34784,
+            "equivalentCurrency": "UAH",
+            "averageRate": 556634
+        },
+        "modifiedBy": "AVAL/IKarpenko",
+        "modificationDate": 643467463
+    },
+    {
+        "id": 3,
+        "pair": "USD/UAH",
+        "limit": 3000000,
+        "currency": "USD",
+        "remainingLimitAmount": -925000,
+        "remainingLimitPercentage": 13,
+        "net": {
+            "amount": 12100,
+            "currency": "USD",
+            "equivalent": 34784,
+            "equivalentCurrency": "UAH",
+            "averageRate": 556634
+        },
+        "buy": {
+            "amount": 55100,
+            "currency": "USD",
+            "equivalent": 778784,
+            "equivalentCurrency": "UAH",
+            "averageRate": 556634
+        },
+        "sell": {
+            "amount": 12100,
+            "currency": "USD",
+            "equivalent": 34784,
+            "equivalentCurrency": "UAH",
+            "averageRate": 556634
+        },
+        "modifiedBy": "AVAL/IKarpenko",
+        "modificationDate": 643467463
+    }
+]

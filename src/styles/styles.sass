@@ -1,0 +1,293 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tabs'
+@import 'mixins'
+
+.mat-form-field-appearance-outline .mat-form-field-outline
+    background: white!important
+    background-color: white!important
+    color: rgba(0, 0, 0, 0.12)
+    border-width:0px
+
+.mat-card-title
+    font-weight: $bold-font-weight
+
+.mat-nav-list .mat-list-item
+    font-size: 14px
+    line-height: 20px
+    font-weight: $medium-font-weight
+    color: $nav-list-item-color
+
+.mat-list-base .mat-icon
+    margin-right: 16px
+
+.mat-cell, .mat-footer-cell
+    font-size: 13px
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary
+    background: rgb(255 193 7)
+    border: solid 1px #fce610
+    color: #000
+
+.mat-toolbar.mat-primary
+    background: $admin-primary-color
+
+.title h2
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    color: $title-color
+    font-size: 32px
+    font-weight: $medium-font-weight
+    left: -1px
+    line-height: 38px
+    position: relative
+
+.mat-zero-state-main-content
+    align-items: flex-start
+    box-sizing: border-box
+    flex-direction: column
+    justify-content: space-around
+    margin: 0
+    overflow: visible
+    padding: 0
+    position: relative
+    padding-top: 1px
+
+.mat-drawer-container
+    background-color: #ffffff
+
+@include -ms-ie()
+    .mat-drawer-container
+        display: block!important
+
+    .mat-drawer-content
+        display: block!important
+        height: 100%
+
+    .mat-zero-state-main-content
+        height: inherit
+
+mat-sidenav-content.mat-drawer-content.mat-sidenav-content
+    padding-top: 66px
+    min-height: 100vh
+
+.title
+  padding-left: 24px
+  padding-right: 24px
+
+.mat-toolbar-shadow
+    box-shadow: 0 2px 4px rgba(0,0,0,.06)
+
+.mat-form-field-outline-filter
+  padding-left: 24px
+  padding-right: 24px
+  padding-top: 30px
+
+.mat-form-field
+  font-size: 14px
+  width: 100%
+
+.mat-elevation-z8
+  margin-left: 24px
+  margin-right: 24px
+  box-shadow: none
+
+.mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary
+    color: $admin-third-color
+
+button
+    height: 40px
+    border-radius: 4px
+    background-color: #fff
+    border: solid 1px #c6cfda
+    display: inline-block
+    text-decoration: none
+    line-height: 26px
+    padding: 6px 25px
+    color: #000
+    font-size: 14px
+    -webkit-transition: all .3s ease
+    transition: all .3s ease
+    position: relative
+    text-align: center
+    min-width: 100px
+    font-weight: 500
+
+.mat-button, .mat-stroked-button
+    font-weight: $bold-font-weight
+
+.mat-icon-button, .mat-flat-button, .mat-dialog-actions .mat-button,.mat-card-actions .mat-button
+    font-weight: $medium-font-weight
+
+.mat-card>.mat-card-actions:last-child
+    margin-bottom: 0!important
+    padding-bottom: 0
+    margin-left: 0px
+
+mat-dialog-container#mat-dialog-account
+    height: auto!important
+    padding: 0px
+
+mat-dialog-container#mat-dialog-notifications
+    display: flex
+    flex-direction: column
+    height: 100%
+    position: absolute
+    right: 0px
+    top: 0
+    border-radius: 0
+    width: 30%!important
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-min-device-pixel-ratio: 2)
+    mat-dialog-container#mat-dialog-account
+        width: calc(100vw - 12px *2) !important
+        position: absolute
+        right: 12px
+        top: 48px
+        height: 90%!important
+
+    mat-dialog-container#mat-dialog-notifications
+        width: 100%
+
+@media screen and (max-width: 361px)
+    mat-dialog-container#mat-dialog-account
+        width: calc(100vw - 12px *2) !important
+        position: absolute
+        right: 12px
+        top: 48px
+        height: auto !important
+
+    mat-dialog-container#mat-dialog-notifications
+        width: 100%
+
+@media screen and (min-width: 361px)
+    mat-dialog-container#mat-dialog-account
+        width: 354px!important
+        position: absolute
+        right: 12px
+        top: 48px
+        height: auto !important
+
+@media only screen and (max-width: 663px)
+    mat-dialog-container#mat-dialog-notifications
+        width: 100%!important
+
+.mat-toolbar
+  z-index: 998
+  position: fixed
+
+@media screen and (max-width: 960px)
+  .hide-sm
+    display: none!important
+
+.mat-table-empty
+  margin: 0 auto !important
+  margin-bottom: 15px!important
+
+  .no-data-title
+    font-size: 20px
+    margin-bottom: 25px!important
+
+  .img-no-data
+    height: 200px
+    width: 200px
+    margin-left: 5%
+
+  .no-data-text-container
+    font-size: 13px
+    line-height: 18px
+    margin-bottom: 10px
+
+@media only screen and (max-width: 663px)
+  .mat-table-empty
+    max-width: 100% !important
+
+  .mat-checkbox-layout .mat-checkbox-label
+       white-space: break-spaces!important
+
+  .mat-zero-state-main-content
+      flex-direction: row
+      display: flex
+      -ms-flex: 1 0 0
+      flex: 1 0 auto
+
+.mat-badge-content
+  background: $admin-third-color!important
+
+.avatar-content
+    font-weight: 600!important
+
+.mat-row-successor-active .avatar-content
+    background-color: rgb(184 195 207)!important
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick
+    color: $admin-second-color
+
+.mat-slide-toggle.mat-checked .mat-ripple-element
+    background-color: #b0b0b0
+
+.mat-pseudo-checkbox-checked, .mat-pseudo-checkbox-indeterminate, .mat-accent .mat-pseudo-checkbox-checked, .mat-accent .mat-pseudo-checkbox-indeterminate,
+.mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb, .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent
+  background: #fff
+
+
+.mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-shadow
+  background: #ffffff
+  color: $nav-list-item-color
+
+.mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-shadow .mat-badge-content
+  background: $badge-warning-color!important
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar
+  background: #fce610
+  border: solid 1px #e0daa1
+
+.mat-slide-toggle-content
+  color: #637282
+  font-weight: 500
+  font-size: 14px
+  line-height: 24px
+
+.mat-simple-snackbar-action
+    color: rgb(255 228 0) !important
+
+.mat-calendar-body-selected
+    background-color: rgb(255 228 0)
+
+.mat-calendar-body-in-range::before
+    background: rgb(211,47,47,14%)
+
+.mat-datepicker-toggle-active
+    color: $nav-list-item-color
+
+mat-dialog-container#mat-dialog-logout
+    width: 100%!important
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit
+    background-color:  #476282
+
+.mat-stepper-vertical .mat-vertical-content
+    padding-top: 15px
+    .mat-button
+        margin-top: 15px
+
+
+.mat-badge-medium.mat-badge-above .mat-badge-content
+    top: -8px!important
+
+::ng-deep .mat-progress-bar.mat-accent .mat-progress-bar-fill::after
+    background-color: rgb(249 171 0) !important
+
+::ng-deep .mat-progress-bar.mat-accent .mat-progress-bar-background
+    fill:  rgb(249 171 0) !important
+
+::ng-deep .mat-progress-bar.mat-accent .mat-progress-bar-buffer
+    background-color: rgb(255 228 0)
+
+@include -ms-ie()
+    :not(.mat-form-field-appearance-legacy).mat-form-field .mat-form-field-prefix .mat-icon-button, :not(.mat-form-field-appearance-legacy).mat-form-field .mat-form-field-suffix .mat-icon-button
+        display: inline!important
+    .mat-datepicker-toggle .mat-focus-indicator.mat-icon-button.mat-button-base
+        margin-bottom: -4px!important

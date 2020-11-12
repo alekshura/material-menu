@@ -1,0 +1,8 @@
+{
+    "id": 1000,
+    "firstName": "John",
+    "lastName": "Smith",
+    "personalNumber": "Number1002",
+    "login": "john.smith@gmai.com",
+    "role": "Admin"
+}

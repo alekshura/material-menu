@@ -1,0 +1,195 @@
+@import 'src/styles/variables'
+@import 'src/styles/mixins'
+
+.mat-dialog-title
+    margin: 0
+    margin-top: 24px
+
+.mat-dialog-user-name
+    color: $title-color
+    font: 600 16px/22px $font-family-sans-serif
+    letter-spacing: .29px
+    margin: 0
+    text-align: center
+    text-overflow: ellipsis
+    overflow: hidden
+
+.mat-avatar-container
+    text-align: center
+    -webkit-align-items: center
+    align-items: center
+    justify-content: center
+    display: flex
+    margin-bottom: 10px
+
+.mat-dialog-user-email
+    color: $admin-third-color
+    font: 500 14px/19px $font-family-sans-serif
+    letter-spacing: normal
+    text-align: center
+    text-overflow: ellipsis
+    overflow: hidden
+
+.mat-dialog-manage
+    background-color: $white-color
+    border: 1px solid $admin-second-color
+    border-radius: 100px
+    color: $admin-third-color
+    display: inline-block
+    font: 500 14px/16px $font-family-sans-serif
+    letter-spacing: 0.25px
+    margin: 16px 0 0
+    max-width: 254px
+    outline: 0
+    padding: 8px 16px
+    text-decoration: none
+    text-overflow: ellipsis
+    overflow: hidden
+    margin-left: 24px
+    margin: auto
+    margin-top: 16px
+    margin-bottom: 16px
+    text-align: center
+    -ms-flex-align: center
+    align-items: center
+    -ms-flex-pack: center
+    justify-content: center
+    display: -ms-flexbox
+    display: flex
+    max-width: 196px
+
+.mat-dialog-actions
+    padding: 0
+    display: block
+    margin-bottom: 0
+    text-align: center
+
+.mat-dialog-user-sign
+    height: 60px
+    position: relative
+.mat-dialog-user-sign:first-child
+    margin-top: -15px
+    margin-bottom: -15px
+.mat-dialog-user-sign:last-child
+    margin-top:-15px
+    margin-bottom: -15px
+.mat-dialog-user-sign:not(:first-child):not(:last-child)
+    margin-bottom: -15px
+    margin-top: 15px
+.mat-dialog-user-sign:hover
+    background: $table-row-hover-color
+    position: relative
+    margin-left: -24px
+    margin-right: -24px
+    padding-right: 24px
+    padding-left: 24px
+
+.dialog-user-hover
+    margin: 0
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+
+label
+    color: #93a0ab
+    display: block
+    font-size: 13px
+    padding-bottom: 8px
+
+p
+    font-size: 16px
+    margin: 0
+    word-wrap: break-word
+
+.mat-dialog-content
+    overflow: visible
+    max-height: 80vh
+    margin: 0px
+
+.mat-dialog-label-padding
+    padding-bottom: 4px
+    padding-top: 24px
+
+.mat-divider-dialog-margin
+    margin-bottom: 15px
+    margin-top: 15px
+
+.mat-divider
+  border-top-color: $divider-color-second
+
+@media only screen and (max-width: 663px)
+    .mat-dialog-content
+        max-height: calc(100vh - 62px - 100px)
+
+    .mat-dialog-manage
+        width: 90%
+
+
+@media screen and (max-width: 361px)
+    .mat-dialog-label-padding
+        padding-bottom: 0
+        padding-top: 16px
+
+    p
+        font-size: 14px
+
+    .mat-divider-dialog-margin
+        margin-left: -24px
+        margin-right: -24px
+        margin-bottom: 10px
+        margin-top: 10px
+
+
+@media screen and (min-width: 361px)
+    .mat-divider-dialog-margin
+        margin-left: -24px
+        margin-right: -24px
+        margin-bottom: 15px
+        margin-top: 15px
+
+    p
+        font-size: 16px
+
+    .mat-dialog-label-padding
+        padding-bottom: 4px
+        padding-top: 24px
+
+
+.mat-dialog-user-pref, .mat-dialog-user-sign
+    .mat-dialog-user-name
+        text-align: initial
+        font-size: 14px
+    .mat-dialog-user-email
+        text-align: initial
+        font-size: 12px
+    .mat-chip
+        font-size: 12px
+        min-height: 24px
+        background-color: transparent
+        color: rgb(226 56 50)
+        border: 1px solid rgb(237 63 53)
+
+@include -ms-ie()
+    .mat-dialog-user-pref, .mat-dialog-user-sign
+        .mat-dialog-user-name .mat-chip-list
+            display: inline-flex!important
+        .mat-dialog-user-email
+            text-align: justify
+
+.mat-chip
+    .mat-standard-chip:not(.mat-chip-disabled):active
+        box-shadow: none
+    .mat-standard-chip::after
+        background: transparent!important
+
+::ng-deep .mat-standard-chip:focus::after, .mat-standard-chip:hover::after
+    opacity: 0
+
+
+::ng-deep mat-dialog-container#mat-dialog-account
+    -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67,.30), 0 2px 6px 2px rgba(60,64,67,.15)
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.30), 0 2px 6px 2px rgba(60,64,67,.15)
+    border-color: transparent
+    outline: none
+    max-height: calc(100vh - 62px - 100px)
+    border-radius: 8px

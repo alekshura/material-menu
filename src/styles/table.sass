@@ -1,0 +1,157 @@
+@import "variables"
+@import 'mixins'
+.mat-table
+  width: 100%
+  margin-bottom: 30px
+
+.mat-form-field
+  font-size: 14px
+  width: 100%
+
+.mat-header-cell, .mat-cell
+  width: 25%
+
+.mat-elevation-z8
+  margin-left: 24px
+  margin-right: 24px
+  box-shadow: none
+
+.mat-form-field-outline-filter
+  padding-left: 24px
+  padding-right: 24px
+  padding-top: 30px
+
+.mat-table thead, .mat-header-row
+    background: $background-color!important
+
+mat-paginator.mat-paginator
+    background: transparent
+
+.mat-table
+    background: inherit
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)
+    border-radius: 8px
+
+.mat-table tbody, .mat-table tfoot, mat-row, mat-footer-row, [mat-row], [mat-footer-row], .mat-table-sticky
+  background: white!important
+
+.mat-cell
+  border: initial
+
+.mat-row
+    border-bottom-color: rgba(0,0,0,0.06)!important
+    border-width: 0
+    border-bottom-width: 0.5px
+    border-style: solid
+
+.mat-row:last-child
+  border-bottom-width: 0px
+
+.mat-row:first-child
+  border-top-color:  rgba(0,0,0,0.06)!important
+  border-top-width: 0.5px
+  border-style: solid
+
+/** .mat-header-cell
+  border-width: 0px!important **/
+
+.mat-table
+  .mat-row:last-child
+    border-bottom-left-radius: $primary-border
+  .mat-cell:first-child
+    border-bottom-left-radius: $primary-border
+
+.mat-table
+  .mat-row:last-child
+    border-bottom-right-radius: $primary-border
+  .mat-cell:last-child
+    border-bottom-right-radius: $primary-border
+  .mat-header-row:first-child
+      border-top-left-radius: $primary-border
+      border-top-right-radius: $primary-border
+
+.mat-table .mat-header-row:last-child, .mat-table .mat-header-cell:last-child
+  border-top-right-radius: $primary-border
+
+.mat-row:hover
+  box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)
+  z-index: 1
+  color: #202124
+  background: rgb(176, 176, 176, 8%)!important
+
+//style only for IE
+@include -ms-ie()
+  .mat-sort-header-container
+    padding-top: 24px
+
+  mat-row, mat-header-row, mat-footer-row
+    align-items: stretch
+
+//responsive
+@media screen and (max-width: 960px)
+    .mat-table, mat-table
+      border: 0
+      vertical-align: middle
+
+      caption
+        font-size: 1em
+
+    .mat-header-cell, .mat-cell, mat-cell
+      width: auto
+
+    .mat-table, mat-table
+      .mat-header-cell
+        border: 10px solid
+        clip: rect(0 0 0 0)
+        height: 1px
+        margin: -1px
+        padding: 0
+        position: absolute
+        width: 1px
+      .mat-row, mat-row
+        border-bottom: 1px solid rgba(0,0,0,0.06)
+        display: block
+        margin-bottom: 0px
+        :last-child
+          margin-bottom: 0px
+      .mat-cell, mat-cell
+        display: block
+        text-align: right
+        font-weight: bold
+        height: auto
+        padding-left: 15px
+        padding-right: 15px
+      .mat-cell:before, mat-cell:before
+        content: attr(data-label)
+        float: left
+        text-transform: uppercase
+        font-weight: normal
+        font-size: .85em
+      .mat-cell:last-child, mat-cell:last-child
+        border-bottom: 0
+      .mat-cell:first-child, mat-cell:first-child
+        padding-top: 4%
+
+    .mat-cell, .mat-header-cell, mat-cell
+        flex: 1
+        overflow: hidden
+        word-wrap: break-word
+
+::ng-deep .mat-tab-group
+  .mat-table
+    .mat-row:last-child
+      border-bottom-right-radius: 0px!important
+      border-bottom-left-radius: 0px!important
+    .mat-header-row:first-child
+        border-top-left-radius: 0px!important
+        border-top-right-radius: 0px!important
+
+::ng-deep .mat-sort-header-sorted .mat-sort-header-button
+    color: #757575
+    font-weight: $bold-font-weight
+
+
+mat-cell:first-of-type, mat-header-cell:first-of-type, mat-footer-cell:first-of-type
+  padding-left: 16px
+mat-cell:last-of-type, mat-header-cell:last-of-type, mat-footer-cell:last-of-type
+  padding-right: 16px

@@ -1,0 +1,99 @@
+<mat-toolbar color="primary" id="toolbar" fxLayout="row" class="mat-toolbar-shadow">
+  <mat-toolbar-row>
+
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon class="mat-icon-menu">menu</mat-icon>
+    </button>
+
+    <a [routerLink]="'/me/home'" class="hide-sm"><img [src]="'assets/img/new_logo.svg'" class="logo" /></a>
+
+    <h1 class="hide-sm mat-badge-header" style="font-weight: 700;background-color: #fff;margin-left: -60px;">
+      Your App Name
+    </h1>
+
+    <span class="fill-remaining-space"></span>
+
+    <!--       <app-avatar size="35" name="{{me.firstName}} {{me.lastName}}" (click)="showMe()"></app-avatar> -->
+
+    <button mat-icon-button style="margin-right: 11px;">
+      <mat-icon #badge [matBadge]="1" matBadgeColor="warn" class="material-icons-outlined mat-icon-notifications"
+        (click)="settings.toggle();showNotifications = true;showSettings = false;">notifications</mat-icon>
+    </button>
+
+    <button mat-icon-button style="margin-right: 11px;">
+      <mat-icon class="material-icons-outlined mat-icon-menu" (click)="settings.toggle();showSettings = true;showNotifications = false;">settings</mat-icon>
+    </button>
+
+    <app-avatar size="35" name="{{me.firstName}} {{me.lastName}}" (click)="showMe()"></app-avatar>
+
+    <!--       <button mat-icon-button (click)="openDialog()">
+        <mat-icon class="mat-icon-logout">logout</mat-icon>
+      </button> -->
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container id="container" fxLayout="column">
+  <mat-sidenav #sidenav [fixedInViewport]="true" mode="over">
+    <div style="width: 35vh;margin-top: 10px;">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="'/me/home'" (click)="sidenav.toggle()" routerLinkActive="active-link">
+          <mat-icon class="material-icons-outlined">home</mat-icon>Main page
+        </a>
+        <a mat-list-item [routerLink]="'/me/margins'" (click)="sidenav.toggle()" routerLinkActive="active-link">
+          <mat-icon class="material-icons-outlined mat-icon-swap-horiz">swap_horiz</mat-icon> Margins
+        </a>
+        <a mat-list-item [routerLink]="'/me/limits'" (click)="sidenav.toggle()" routerLinkActive="active-link">
+          <mat-icon class="material-icons-outlined">insert_chart</mat-icon> Limits and positions
+        </a>
+      </mat-nav-list>
+    </div>
+
+    <div class="padding: 10px" style="width: 35vh;margin-top: 10px;position: absolute; bottom: 0;">
+      <mat-divider></mat-divider>
+      <mat-nav-list>
+        <a mat-list-item (click)="showInfo()">
+          <mat-icon class="material-icons-outlined">info</mat-icon> About
+        </a>
+      </mat-nav-list>
+    </div>
+
+  </mat-sidenav>
+  <mat-sidenav-content (scroll)="onScrollHost($event)" fxLayout="column" fxFlex="100">
+    <div class="back" fxFlex="100">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+  <mat-sidenav #settings [fixedInViewport]="true" mode="side" position="end" [ngClass]="{'mat-sidenav-settings': true}">
+    <div *ngIf="showSettings">
+      <div class="mat-title mat-title-0">
+        <div class="mat-quick-settings" aria-label="Settings">Settings</div>
+        <button mat-icon-button (click)="settings.toggle();showSettings = false" aria-label="Close">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="mat-quick-settings-content">
+
+      </div>
+    </div>
+    <div *ngIf="showNotifications">
+      <div class="mat-title mat-title-0">
+        <div class="mat-quick-settings" aria-label="Settings">Notifications</div>
+        <button mat-icon-button (click)="settings.toggle();showNotifications = false" aria-label="Close">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="mat-quick-settings-content">
+        <div class="mat-alerts-drawer-empty"><img alt="" aria-hidden="true"
+            src="/assets/img/reminders.svg">
+          <p class="mat-alerts-drawer-empty-title"> You don't have any alerts </p>
+          <p> You will see notifications from projects you work on appear here </p>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>
