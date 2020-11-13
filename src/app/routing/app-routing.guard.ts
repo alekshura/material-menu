@@ -12,7 +12,7 @@ export class AppRoutingGuard implements CanActivate {
 
     async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> {
 
-        // TODO Permission check
+        // This is a place to implement permissions check logic of youe app
         return true;
     }
 }

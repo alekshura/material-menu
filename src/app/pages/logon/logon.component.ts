@@ -17,6 +17,7 @@ export class LogonComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // TODO write your logic here: app setup, auth, etc.
     this.authorizationService.logon().subscribe(user =>{
       timer(2000).subscribe(x => {
         this.authorizationService.setUser(user);

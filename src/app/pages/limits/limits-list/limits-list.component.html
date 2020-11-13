@@ -1,9 +1,9 @@
 <mat-progress-bar mode="indeterminate" color="accent" *ngIf="showProgressBar"></mat-progress-bar>
 
 <div class="title">
-  <h2>Limits and positions</h2>
+  <h2>Place here grid title</h2>
   <mat-slide-toggle style="float: right;">
-    Auto refresh
+    Toggle example
   </mat-slide-toggle>
 </div>
 
@@ -12,7 +12,7 @@
   <div class="mat-elevation-z8">
 
     <div class="mat-canvas-bar-container">
-      Current Session (22 Sep 2020 17:00:00 - 23 Sep 2020 16:59:59)
+      Place here grid subtitle
     </div>
 
     <mat-table [dataSource]="dataSource" multiTemplateDataRows>
@@ -191,140 +191,6 @@
         [class.mat-table-expanded-row]="expandedRow === row">
       </mat-row>
     </mat-table>
-
-    <mat-accordion>
-        <mat-expansion-panel  [togglePosition]="'before'" (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Previous Session (21 Sep 2020 17:00:00 - 22 Sep 2020 16:59:59, Data as of 22 Sep 2020 16:59:59)
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <mat-table [dataSource]="dataSource" multiTemplateDataRows>
-
-            <ng-container matColumnDef="pair">
-              <mat-header-cell *matHeaderCellDef [style.text-align]="center">Currency pair</mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="value" style="color: #476282;">{{row.pair}}
-              </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="limit">
-              <mat-header-cell *matHeaderCellDef [style.text-align]="center">Limit</mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="value" style="color: #476282;">
-                {{row.limit | currency:row.currency:'symbol':'4.2-2'}}
-              </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="amount">
-              <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name">
-                {{row.remainingLimitAmount | currency:row.currency:'symbol':'4.2-2' }} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="percentage">
-              <mat-header-cell *matHeaderCellDef>Percentage</mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name"> {{row.remainingLimitPercentage | percent}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="net">
-              <mat-header-cell *matHeaderCellDef></mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name">
-                {{row.net.amount | currency:row.net.currency:'symbol':'4.2-2'}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="netequivalent">
-              <mat-header-cell *matHeaderCellDef>Equivalent </mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name">
-                {{row.net.equivalent| currency:row.equivalentCurrency:'symbol':'4.2-2'}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="netavgrate">
-              <mat-header-cell *matHeaderCellDef>Avg. Rate</mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name"> {{row.net.averageRate}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="buy">
-              <mat-header-cell *matHeaderCellDef></mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name">
-                {{row.buy.amount | currency:row.buy.currency:'symbol':'4.2-2' }} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="buyequivalent">
-              <mat-header-cell *matHeaderCellDef>Equivalent</mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name">
-                {{row.buy.equivalent | currency:row.buy.equivalentCurrency:'symbol':'4.2-2'}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="buyavgrate">
-              <mat-header-cell *matHeaderCellDef>Avg. Rate</mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name"> {{row.buy.averageRate}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="sell">
-              <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name">
-                {{row.sell.amount | currency:row.sell.currency:'symbol':'4.2-2' }} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="sellequivalent">
-              <mat-header-cell *matHeaderCellDef> Equivalent </mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name">
-                {{row.sell.equivalent | currency:row.sell.equivalentCurrency:'symbol':'4.2-2' }} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="sellavgrate">
-              <mat-header-cell *matHeaderCellDef> Avg. Rate </mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name"> {{row.sell.averageRate}} </mat-cell>
-            </ng-container>
-
-
-            <ng-container matColumnDef="who">
-              <mat-header-cell *matHeaderCellDef> Who </mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name"> {{row.modifiedBy}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="when">
-              <mat-header-cell *matHeaderCellDef> When </mat-header-cell>
-              <mat-cell *matCellDef="let row" data-label="name"> {{row.modificationDate | date: 'dd.MM.yyyy'}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="header-pair">
-              <mat-header-cell *matHeaderCellDef [style.text-align]="center" [attr.colspan]="2"> </mat-header-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="header-remaining-limit">
-              <mat-header-cell *matHeaderCellDef [attr.colspan]="2" [style.text-align]="center"> Remaining limit
-              </mat-header-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="header-net">
-              <mat-header-cell *matHeaderCellDef [attr.colspan]="3" [style.text-align]="center"> Net </mat-header-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="header-buy">
-              <mat-header-cell *matHeaderCellDef [attr.colspan]="3" [style.text-align]="center"> Bank buys
-              </mat-header-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="header-sell">
-              <mat-header-cell *matHeaderCellDef [attr.colspan]="3" [style.text-align]="center"> Bank sells
-              </mat-header-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="header-modification">
-              <mat-header-cell *matHeaderCellDef [attr.colspan]="2" [style.text-align]="center"> Last Limit Modification
-              </mat-header-cell>
-            </ng-container>
-
-            <mat-header-row *matHeaderRowDef="['header-pair', 'header-remaining-limit', 'header-net', 'header-buy',
-          'header-sell', 'header-modification']">
-            </mat-header-row>
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;">
-            </mat-row>
-          </mat-table>
-        </mat-expansion-panel>
-      </mat-accordion>
 
   </div>
 

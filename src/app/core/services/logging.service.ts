@@ -16,7 +16,7 @@ export class LoggingService {
   constructor(private http: HttpClient) {  }
 
   info(message: string, logger?: string) {
-    console.log(`Logger: 'Rba.Admin.Frontend'} - Message: ${message}`);
+    console.log(`Logger: 'Compentio.Material.Frontend'} - Message: ${message}`);
 
     if (this.logLevel !== "INFO"){
       return;
@@ -33,7 +33,7 @@ export class LoggingService {
   }
 
   error(message: string, logger?: string) {    
-    console.log(`Logger: 'Rba.Admin.Frontend' - Message: ${message}`);
+    console.log(`Logger: 'Compentio.Material.Frontend' - Message: ${message}`);
 
     let logEntry: LogEntry = {
       severity: "ERROR",

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rbi-limits-admin'`, () => {
+  it(`should have as title 'material-menu-template'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rbi-limits-admin');
+    expect(app.title).toEqual('material-menu-template');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('rbi-limits-admin app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('material-menu-template app is running!');
   });
 });

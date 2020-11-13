@@ -1,10 +1,21 @@
-# MaterialMenu
+# App Setup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## Nodejs install
+[Install nodejs](https://nodejs.org/en/download/) on your machine.
+
+## Angular CLI install
+If you do not have Angular Cli, [Install](https://cli.angular.io/) it.
+
+## Setup or update dependencies
+Run `npm update` to setup or update all packages used in the App
+
+# Material Menu
+Use the code
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --configuration=mock --o` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. 
+Mock configuration set up an mock interceptor, that serves macked responses from API. It allows us tu run application locally without external API.
 
 ## Code scaffolding
 

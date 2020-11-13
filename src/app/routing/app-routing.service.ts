@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthorizationService } from '@app/core/services/authorization.service';
 
-// Here we define routing for the App
+// Define here routing for the App
 @Injectable()
 export class AppRoutingService {
 
@@ -28,5 +28,10 @@ export class AppRoutingService {
 
   goToMain(refresh?: boolean) {
     this.router.navigate([`${this.meRoute}/home`]);
-  }  
+  } 
+  
+  // Define and use in application routing for menu injecting app-routing.service in youe components
+  goToMenu1(refresh?: boolean) {
+    this.router.navigate([`${this.meRoute}/menu1`]);
+  }
 }

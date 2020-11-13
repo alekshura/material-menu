@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('rbi-limits-admin app is running!');
+    expect(page.getTitleText()).toEqual('material-menu-template app is running!');
   });
 
   afterEach(async () => {
