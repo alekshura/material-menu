@@ -12,184 +12,55 @@
   <div class="mat-elevation-z8">
 
     <div class="mat-canvas-bar-container">
-      Place here grid subtitle
+      Place here grid subtitle. Now it has title "limits".
     </div>
 
     <mat-table [dataSource]="dataSource" multiTemplateDataRows>
 
-      <ng-container matColumnDef="pair">
-        <mat-header-cell *matHeaderCellDef [style.text-align]="center">Currency pair</mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="value" style="color: #476282;">{{row.pair}}
+      <ng-container matColumnDef="avatar">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <app-avatar size="30" name="{{row.userName}}">
+          </app-avatar>
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="limit">
-        <mat-header-cell *matHeaderCellDef [style.text-align]="center">Limit</mat-header-cell>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef [style.text-align]="center">Limit name</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="name" style="color: #476282;">{{row.name}}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="value">
+        <mat-header-cell *matHeaderCellDef [style.text-align]="center">Limit value</mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="value" style="color: #476282;">
-          {{row.limit | currency:row.currency:'symbol':'4.2-2'}}
+          {{row.value | currency:row.currency:'symbol':'4.2-2'}}
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="amount">
-        <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{row.remainingLimitAmount | currency:row.currency:'symbol':'4.2-2' }} </mat-cell>
+      <ng-container matColumnDef="userName">
+        <mat-header-cell *matHeaderCellDef>User name</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="userName"> {{row.userName }} </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="percentage">
-        <mat-header-cell *matHeaderCellDef>Percentage</mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name"> {{row.remainingLimitPercentage | percent}} </mat-cell>
+      <ng-container matColumnDef="remainingValue">
+        <mat-header-cell *matHeaderCellDef> Remaining limit value</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="remainingValue">
+          {{row.remainingValue | currency:row.currency:'symbol':'4.2-2'}} </mat-cell>
       </ng-container>
-
-      <ng-container matColumnDef="net">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{row.net.amount | currency:row.net.currency:'symbol':'4.2-2'}} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="netequivalent">
-        <mat-header-cell *matHeaderCellDef>Equivalent </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{row.net.equivalent| currency:row.equivalentCurrency:'symbol':'4.2-2'}} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="netavgrate">
-        <mat-header-cell *matHeaderCellDef>Avg. Rate</mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name"> {{row.net.averageRate}} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="buy">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{row.buy.amount | currency:row.buy.currency:'symbol':'4.2-2' }} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="buyequivalent">
-        <mat-header-cell *matHeaderCellDef>Equivalent</mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{row.buy.equivalent | currency:row.buy.equivalentCurrency:'symbol':'4.2-2'}} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="buyavgrate">
-        <mat-header-cell *matHeaderCellDef>Avg. Rate</mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name"> {{row.buy.averageRate}} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="sell">
-        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{row.sell.amount | currency:row.sell.currency:'symbol':'4.2-2' }} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="sellequivalent">
-        <mat-header-cell *matHeaderCellDef> Equivalent </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{row.sell.equivalent | currency:row.sell.equivalentCurrency:'symbol':'4.2-2' }} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="sellavgrate">
-        <mat-header-cell *matHeaderCellDef> Avg. Rate </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name"> {{row.sell.averageRate}} </mat-cell>
-      </ng-container>
-
 
       <ng-container matColumnDef="who">
-        <mat-header-cell *matHeaderCellDef> Who </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> Modified By </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="name"> {{row.modifiedBy}} </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="when">
         <mat-header-cell *matHeaderCellDef> When </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="name"> {{row.modificationDate | date: 'dd.MM.yyyy'}} </mat-cell>
-      </ng-container>
+      </ng-container>         
 
-      <ng-container matColumnDef="header-pair">
-        <mat-header-cell *matHeaderCellDef [style.text-align]="center" [attr.colspan]="2"> </mat-header-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="header-remaining-limit">
-        <mat-header-cell *matHeaderCellDef [attr.colspan]="2" [style.text-align]="center"> Remaining limit
-        </mat-header-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="header-net">
-        <mat-header-cell *matHeaderCellDef [attr.colspan]="3" [style.text-align]="center"> Net </mat-header-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="header-buy">
-        <mat-header-cell *matHeaderCellDef [attr.colspan]="3" [style.text-align]="center"> Bank buys </mat-header-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="header-sell">
-        <mat-header-cell *matHeaderCellDef [attr.colspan]="3" [style.text-align]="center"> Bank sells </mat-header-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="header-modification">
-        <mat-header-cell *matHeaderCellDef [attr.colspan]="2" [style.text-align]="center"> Last Limit Modification
-        </mat-header-cell>
-      </ng-container>
-
-
-      <ng-container matColumnDef="limitDetails">
-        <mat-cell *matCellDef="let row" [attr.colspan]="displayedColumns.length" style="padding: 0 24px;">
-          <div class="mat-form-limit" *ngIf="expandedRow === row">
-            <form [attr.id]="'formLimit' + row.id" class="mat-form"
-              [@detailExpand]="row == expandedRow ? 'expanded' : 'collapsed'" [formGroup]="form">
-              <mat-card-content>
-                <div>
-                  <div class="title">
-                    <h2 class="mat-pillar-title"> New limit [{{row.pair}}]</h2>
-                  </div>
-                  <div class="mat-form-limit-content">
-                    <mat-form-field>
-                      <mat-label>Limit</mat-label>
-                      <input matInput formControlName="limitFormControl" (input)="onChange($event.target.value)">
-                    </mat-form-field>
-                    <div>
-                      <label style="opacity: 1;
-                      padding-bottom: 24px;
-                      font-weight: 500;
-                      font-size: 18px;
-                      color: #637282;">Remaining limit</label>
-                    </div>
-                    <div>
-                      <div>
-                        <label>Amount</label>
-                        <p>{{newAmount | currency:row.currency:'symbol':'4.2-2' }}</p>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <label>Percentage</label>
-                        <p> {{newPercentage | percent}} </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mat-form-limit-actions">
-                    <button mat-stroked-button color="primary"
-                      (click)="$event.preventDefault();expandedRow = expandedRow === row ? null : row"
-                      style="margin-right: 8px;">Cancel</button>
-                    <button mat-flat-button color="primary" type="submit" class="black-btn"
-                      (click)="updateLimit(row);$event.preventDefault();">Save</button>
-                  </div>
-                </div>
-              </mat-card-content>
-            </form>
-          </div>
-        </mat-cell>
-      </ng-container>
-
-
-      <mat-header-row *matHeaderRowDef="['header-pair', 'header-remaining-limit', 'header-net', 'header-buy',
-      'header-sell', 'header-modification']">
-      </mat-header-row>
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="edit(row)"
-        [class.mat-table-expanded-row]="expandedRow === row">
-      </mat-row>
-      <mat-row [ngClass]="{'mat-table-expanded-element-row': true}" *matRowDef="let row; columns: ['limitDetails']"
-        [class.mat-table-expanded-row]="expandedRow === row">
-      </mat-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
 
   </div>

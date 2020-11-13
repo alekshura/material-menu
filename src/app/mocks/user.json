@@ -3,6 +3,6 @@
     "firstName": "John",
     "lastName": "Smith",
     "personalNumber": "Number1002",
-    "login": "john.smith@gmai.com",
+    "login": "john.smith@gmail.com",
     "role": "Admin"
 }

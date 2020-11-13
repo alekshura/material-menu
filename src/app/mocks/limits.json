@@ -1,95 +1,63 @@
 [
     {
         "id": 1,
-        "pair": "EUR/USD",
-        "limit": 1000000,
+        "name": "Limit for buy in eshop.com",
+        "value": 1000000,
         "currency": "EUR",
-        "remainingLimitAmount": -925000,
-        "remainingLimitPercentage": 13,
-        "net": {
-            "amount": 12100,
-            "currency": "EUR",
-            "equivalent": 34784,
-            "equivalentCurrency": "USD",
-            "averageRate": 556634
-        },
-        "buy": {
-            "amount": 55100,
-            "currency": "EUR",
-            "equivalent": 778784,
-            "equivalentCurrency": "USD",
-            "averageRate": 556634
-        },
-        "sell": {
-            "amount": 12100,
-            "currency": "EUR",
-            "equivalent": 34784,
-            "equivalentCurrency": "USD",
-            "averageRate": 556634
-        },
-        "modifiedBy": "AVAL/IKarpenko",
+        "userName": "John Smith",
+        "remainingValue": 900000,        
+        "modifiedBy": "john.smith@gmail.com",
         "modificationDate": 643467463
     },
     {
         "id": 2,
-        "pair": "EUR/UAH",
-        "limit": 2000000,
-        "currency": "EUR",
-        "remainingLimitAmount": -6565000,
-        "remainingLimitPercentage": 13,
-        "net": {
-            "amount": 121050,
-            "currency": "EUR",
-            "equivalent": 345784,
-            "equivalentCurrency": "UAH",
-            "averageRate": 556634
-        },
-        "buy": {
-            "amount": 551040,
-            "currency": "EUR",
-            "equivalent": 778784,
-            "equivalentCurrency": "UAH",
-            "averageRate": 556634
-        },
-        "sell": {
-            "amount": 12100,
-            "currency": "EUR",
-            "equivalent": 34784,
-            "equivalentCurrency": "UAH",
-            "averageRate": 556634
-        },
-        "modifiedBy": "AVAL/IKarpenko",
+        "name": "Limit for sell online",
+        "value": 2000000,
+        "currency": "USD",
+        "userName": "Ian Pace",
+        "remainingValue": 800000,        
+        "modifiedBy": "john.smith@gmail.com",
         "modificationDate": 643467463
     },
     {
         "id": 3,
-        "pair": "USD/UAH",
-        "limit": 3000000,
+        "name": "Overall limit",
+        "value": 1000000,
+        "currency": "EUR",
+        "userName": "John Lord",
+        "remainingValue": 900000,        
+        "modifiedBy": "j.kelly@gmail.com",
+        "modificationDate": 643467463
+    },
+    {
+        "id": 4,
+        "name": "Limit for buy in Internet",
+        "value": 5000000,
+        "currency": "EUR",
+        "userName": "Freddy Mercury",
+        "remainingValue": 200000,        
+        "modifiedBy": "adam.north@yourmail.com",
+        "modificationDate": 643467463
+    },
+    {
+        "id": 5,
+        "name": "Limit for buy in eshop.com",
+        "value": 340000,
+        "currency": "CHF",
+        "userName": "Bruce Dockinson",
+        "remainingValue": 460000,        
+        "modifiedBy": "john.smith@gmail.com",
+        "modificationDate": 643467463
+    },
+    {
+        "id": 6,
+        "name": "Limit for buy in eshop.com",
+        "value": 1000000,
         "currency": "USD",
-        "remainingLimitAmount": -925000,
-        "remainingLimitPercentage": 13,
-        "net": {
-            "amount": 12100,
-            "currency": "USD",
-            "equivalent": 34784,
-            "equivalentCurrency": "UAH",
-            "averageRate": 556634
-        },
-        "buy": {
-            "amount": 55100,
-            "currency": "USD",
-            "equivalent": 778784,
-            "equivalentCurrency": "UAH",
-            "averageRate": 556634
-        },
-        "sell": {
-            "amount": 12100,
-            "currency": "USD",
-            "equivalent": 34784,
-            "equivalentCurrency": "UAH",
-            "averageRate": 556634
-        },
-        "modifiedBy": "AVAL/IKarpenko",
+        "userName": "Will Smith",
+        "remainingValue": 900000,        
+        "modifiedBy": "andy.glover@mymail.com",
         "modificationDate": 643467463
     }
+    
 ]

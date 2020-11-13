@@ -6,18 +6,15 @@
     </app-avatar>
   </div>
   <div class="mat-dialog-user-name">{{currentProfile.firstName}} {{currentProfile.lastName}}</div>
-  <div class="mat-dialog-user-email">{{currentProfile.personalNumber}}</div>
-
-  <div class="mat-dialog-manage">Admin profile</div>
-
+  <!-- You can here hanlde profile change -->
+  <div class="mat-dialog-manage">Change profile</div>
   <mat-divider class="mat-divider mat-divider-dialog-margin"></mat-divider>
 
   <div class="mat-dialog-user-pref">
-    <div><label>Login</label>
+    <div><label>You are lagged as</label>
       <p>{{currentProfile.login}}</p>
     </div>
   </div>
-
   <mat-divider class="mat-divider mat-divider-dialog-margin"></mat-divider>
 
   <div mat-dialog-actions>

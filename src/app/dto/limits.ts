@@ -1,21 +1,10 @@
 export interface Limit {
   id: number;
-  pair: string;
-  limit: number;
+  name: string;
+  value: number;
   currency: string;
-  remainingLimitAmount: number;
-  remainingLimitPercentage: number;
-  net: Amount;
-  buy: Amount;
-  sell: Amount;
+  userName: number;
+  remainingValue: number;
   modifiedBy: string;
   modificationDate: Date;
-}
-
-export interface Amount{
-  amount: number;
-  currency: string;
-  equivalent: number;
-  equivalentCurrency: string;
-  averageRate: number;
 }
