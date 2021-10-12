@@ -1,4 +1,7 @@
-# App Setup
+# Material menu app
+
+![GitHub top language](https://img.shields.io/github/languages/top/alekshura/material-menu)
+
 
 ## Nodejs install
 [Install nodejs](https://nodejs.org/en/download/) on your machine.
